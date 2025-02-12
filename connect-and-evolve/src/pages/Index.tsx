@@ -45,7 +45,6 @@ const mockUsers: User[] = [
     ],
     availability: "Both",
   },
-  // Add more mock users as needed
 ];
 
 const trendingSkills = [
@@ -128,12 +127,11 @@ const Index = () => {
   };
 
   const handleRequestSwap = (userId: string) => {
-    // Handle swap request logic here
     console.log("Swap requested with user:", userId);
   };
 
   const handleViewProfile = (userId: string) => {
-    window.open(`/profile/${userId}`, '_blank');
+    window.open(`/profile/${userId}`, "_blank");
   };
 
   return (
@@ -147,77 +145,19 @@ const Index = () => {
             </h1>
             <Sparkles className="w-6 h-6 animate-float" />
           </div>
-          
+
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
             Connect with others, share your expertise, and learn something new
           </p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
-            {/* Trending Skills */}
-            <div className="p-6 rounded-xl glass">
-              <h2 className="text-lg font-semibold text-purple-600 dark:text-purple-400 mb-4 flex items-center gap-2">
-                <Award className="w-5 h-5" />
-                Most Swapped Skills
-              </h2>
-              <div className="space-y-3">
-                {trendingSkills.map((skill) => (
-                  <div
-                    key={skill.name}
-                    className="flex items-center justify-between text-sm"
-                  >
-                    <span className="text-gray-700 dark:text-gray-300">
-                      🔹 {skill.name}
-                    </span>
-                    <span className="text-purple-500 font-medium">
-                      Swapped {skill.swaps}+ times
-                    </span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Daily Challenges */}
-            <div className="p-6 rounded-xl glass">
-              <h2 className="text-lg font-semibold text-purple-600 dark:text-purple-400 mb-4 flex items-center gap-2">
-                <Brain className="w-5 h-5" />
-                Daily Skill Challenges
-              </h2>
-              <div className="space-y-4">
-                {dailyChallenges.map((challenge) => (
-                  <div
-                    key={challenge.title}
-                    className="flex items-start gap-3 text-sm"
-                  >
-                    {challenge.icon}
-                    <div>
-                      <div className="font-medium text-gray-800 dark:text-gray-200">
-                        {challenge.title}
-                      </div>
-                      <div className="text-gray-600 dark:text-gray-400">
-                        {challenge.description}
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
         </div>
 
-        <div className="animate-fadeIn" style={{ animationDelay: "0.1s" }}>
-          <CategoryScroll
-            onSelectCategory={handleCategorySelect}
-            selectedCategory={selectedCategory}
-            onSelectSkill={handleSkillSelect}
-          />
-        </div>
+        <CategoryScroll
+          onSelectCategory={handleCategorySelect}
+          selectedCategory={selectedCategory}
+          onSelectSkill={handleSkillSelect}
+        />
 
-        <div className="animate-fadeIn" style={{ animationDelay: "0.2s" }}>
-          <SearchFilters
-            onSearch={handleSearch}
-            onFilterChange={handleFilterChange}
-          />
-        </div>
+        <SearchFilters onSearch={handleSearch} onFilterChange={handleFilterChange} />
 
         {searchQuery && (
           <div className="text-xl font-semibold text-gray-700 dark:text-gray-300 mb-4 animate-fadeIn">
