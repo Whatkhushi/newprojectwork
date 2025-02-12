@@ -7,29 +7,29 @@ import { useToast } from "@/components/ui/use-toast";
 import { Sparkles, Award, Users, Trophy, Rocket, Brain } from "lucide-react";
 
 const mockUsers: User[] = [
+  // {
+  //   id: "1",
+  //   name: "Alex Chen",
+  //   avatar: "https://i.pravatar.cc/150?u=alex",
+  //   specialization: "Full Stack Developer",
+  //   rating: 4.8,
+  //   isVerified: true,
+  //   bio: "Passionate about teaching and learning new technologies",
+  //   skills: [
+  //     { name: "React", level: "Advanced", category: "Programming" },
+  //     { name: "Node.js", level: "Advanced", category: "Programming" },
+  //     { name: "UI Design", level: "Intermediate", category: "Design" },
+  //   ],
+  //   learning: [
+  //     { name: "Machine Learning", level: "Beginner", category: "Programming" },
+  //     { name: "Digital Marketing", level: "Beginner", category: "Marketing" },
+  //   ],
+  //   availability: "Online",
+  // },
   {
     id: "1",
-    name: "Alex Chen",
-    avatar: "https://i.pravatar.cc/150?u=alex",
-    specialization: "Full Stack Developer",
-    rating: 4.8,
-    isVerified: true,
-    bio: "Passionate about teaching and learning new technologies",
-    skills: [
-      { name: "React", level: "Advanced", category: "Programming" },
-      { name: "Node.js", level: "Advanced", category: "Programming" },
-      { name: "UI Design", level: "Intermediate", category: "Design" },
-    ],
-    learning: [
-      { name: "Machine Learning", level: "Beginner", category: "Programming" },
-      { name: "Digital Marketing", level: "Beginner", category: "Marketing" },
-    ],
-    availability: "Online",
-  },
-  {
-    id: "2",
-    name: "Sarah Johnson",
-    avatar: "https://i.pravatar.cc/150?u=sarah",
+    name: "Aarav Mehta",
+    avatar: "https://randomuser.me/api/portraits/men/76.jpg",
     specialization: "UX Designer",
     rating: 4.5,
     isVerified: true,
@@ -37,13 +37,89 @@ const mockUsers: User[] = [
     skills: [
       { name: "UI/UX Design", level: "Advanced", category: "Design" },
       { name: "Figma", level: "Advanced", category: "Design" },
-      { name: "User Research", level: "Advanced", category: "Design" },
+      { name: "User Research", level: "Beginner", category: "Design" },
     ],
     learning: [
       { name: "React", level: "Beginner", category: "Programming" },
       { name: "Python", level: "Beginner", category: "Programming" },
     ],
     availability: "Both",
+  },
+  {
+    "id": "2",
+    "name": "Ishita Mukund",
+    "avatar": "https://i.pravatar.cc/150?u=michael",
+    "specialization": "Data Scientist",
+    "rating": 4.7,
+    "isVerified": false,
+    "bio": "Loves working with data and building intelligent systems",
+    "skills": [
+      { "name": "Python", "level": "Advanced", "category": "Programming" },
+      { "name": "TensorFlow", "level": "Beginner", "category": "AI/ML" },
+      { "name": "SQL", "level": "Advanced", "category": "Databases" }
+    ],
+    "learning": [
+      { "name": "Cloud Computing", "level": "Beginner", "category": "DevOps" },
+      { "name": "Cybersecurity", "level": "Beginner", "category": "Security" }
+    ],
+    "availability": "Offline"
+  },
+  {
+    "id": "3",
+    "name": "Ananya Kapoor",
+    "avatar": "https://i.pravatar.cc/150?u=emily",
+    "specialization": "Marketing Strategist",
+    "rating": 3,
+    "isVerified": true,
+    "bio": "Helping brands grow with digital marketing strategies",
+    "skills": [
+      { "name": "SEO", "level": "Advanced", "category": "Marketing" },
+      { "name": "Google Ads", "level": "Intermediate", "category": "Marketing" },
+      { "name": "Content Writing", "level": "Advanced", "category": "Writing" }
+    ],
+    "learning": [
+      { "name": "Graphic Design", "level": "Beginner", "category": "Design" },
+      { "name": "Python", "level": "Beginner", "category": "Programming" }
+    ],
+    "availability": "Online"
+  },
+  {
+    id: "4",
+    name: "Mulaik Khan",
+    avatar: "https://i.pravatar.cc/150?u=alex",
+    specialization: "Digital Marketer",
+    rating: 4.6,
+    isVerified: false,
+    bio: "Helping brands grow through data-driven marketing.",
+    skills: [
+      { name: "SEO", level: "Advanced", category: "Marketing" },
+      { name: "Google Ads", level: "Advanced", category: "Marketing" },
+      { name: "Social Media Strategy", level: "Intermediate", category: "Marketing" },
+    ],
+    learning: [
+      { name: "Email Marketing", level: "Beginner", category: "Marketing" },
+      { name: "AI in Marketing", level: "Beginner", category: "Technology" },
+    ],
+    availability: "Both",
+  },
+  {
+    id: "6",
+    name: "Meera Iyer",
+    avatar: "https://randomuser.me/api/portraits/women/50.jpg",
+    specialization: "Content Writer",
+    rating: 4.7,
+    isVerified: true,
+    bio: "Writing compelling stories that engage and inspire.",
+    skills: [
+      { name: "Creative Writing", level: "Advanced", category: "Writing" },
+      { name: "SEO Content", level: "Beginner", category: "Marketing" },
+      { name: "Copywriting", level: "Intermediate", category: "Writing" },
+    ],
+    learning: [
+      { name: "Technical Writing", level: "Beginner", category: "Writing" },
+      { name: "UX Writing", level: "Beginner", category: "Design" },
+    ],
+    availability: "Online",
   },
 ];
 
@@ -141,15 +217,45 @@ const Index = () => {
           <div className="flex items-center justify-center gap-2 text-purple-600 dark:text-purple-400">
             <Sparkles className="w-6 h-6 animate-float" />
             <h1 className="text-4xl font-bold bg-gradient-to-r from-purple-600 to-blue-500 bg-clip-text text-transparent">
-              Swap Skills, Expand Possibilities!
+            <span className="text-black">🤝</span> Swap Skills, Expand Your Horizons! <span className="text-black">🌍</span>
             </h1>
             <Sparkles className="w-6 h-6 animate-float" />
           </div>
 
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Connect with others, share your expertise, and learn something new
+          Connect, share expertise, and supercharge your learning! 🚀
           </p>
+          
         </div>
+        <div className="flex justify-center items-center gap-6 text-lg font-semibold 
+                text-purple-700 opacity-90 mt-4 animate-fade-in">
+  <span className="flex items-center gap-2 px-3 py-2 rounded-lg bg-gradient-to-r 
+                   from-pink-200 to-purple-300 text-purple-900 shadow-sm 
+                   hover:scale-105 transition-transform duration-300">
+    🔄 Trade Skills
+  </span>
+  
+  <span className="flex items-center gap-2 px-3 py-2 rounded-lg bg-gradient-to-r 
+                   from-purple-300 to-pink-200 text-purple-900 shadow-sm 
+                   hover:scale-105 transition-transform duration-300">
+    🎯  Smart Swaps
+  </span>
+
+  <span className="flex items-center gap-2 px-3 py-2 rounded-lg bg-gradient-to-r 
+                   from-pink-200 to-purple-300 text-purple-900 shadow-sm 
+                   hover:scale-105 transition-transform duration-300">
+    ⏳ Earn Time Credits
+  </span>
+
+  <span className="flex items-center gap-2 px-3 py-2 rounded-lg bg-gradient-to-r 
+                   from-purple-300 to-pink-200 text-purple-900 shadow-sm 
+                   hover:scale-105 transition-transform duration-300">
+    🌟 Level Up
+  </span>
+</div>
+
+        
+        
 
         <CategoryScroll
           onSelectCategory={handleCategorySelect}

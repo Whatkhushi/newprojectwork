@@ -151,7 +151,7 @@ export const ProfileCard = ({ user, onRequestSwap, onViewProfile }: ProfileCardP
           <AlertDialogHeader>
             <AlertDialogTitle>Verify Your Skills</AlertDialogTitle>
             <AlertDialogDescription>
-              Choose how you'd like to verify your skills:
+            Show What You Know – Take a Quiz to Get Verified!
             </AlertDialogDescription>
           </AlertDialogHeader>
           <div className="grid gap-4 py-4">
@@ -161,16 +161,16 @@ export const ProfileCard = ({ user, onRequestSwap, onViewProfile }: ProfileCardP
               onClick={handleVerificationSubmit}
             >
               <BrainCircuit className="w-4 h-4" />
-              Take a Skill Assessment Quiz
+              Skill Assessment Quiz
             </Button>
-            <Button
+            {/* <Button
               variant="outline"
               className="w-full justify-start gap-2"
               onClick={handleVerificationSubmit}
             >
               <Upload className="w-4 h-4" />
               Upload Certificates or Project Proof
-            </Button>
+            </Button> */}
           </div>
           <AlertDialogFooter>
             <AlertDialogCancel>Cancel</AlertDialogCancel>
